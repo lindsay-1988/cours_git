@@ -19,6 +19,10 @@
 	<div class="cmd">git config --global user.email 'lindsay.fraynet@gmail.com'</div>
 	<div class="cmd">git config --global user.name 'lindsay fraynet'</div>
 
+
+
+
+
 	<h2>Les commandes de bases</h2>
 	Initialiser un projet:
 	<div class="cmd">git init</div>
@@ -41,6 +45,11 @@
 	Commit avec add + message (fonctionne sur les fichiers déjà add précédemment):
 	<div class="cmd">git commit -a -m 'message'</div>
 
+
+
+
+
+
 	<h2>Correction des fichiers</h2>
 	Voir les différernts commit:
 	<div class="cmd">git log</div>
@@ -48,7 +57,61 @@
 	Corriger les modifications sur un fichier (pas encore add):
 	<div class="cmd">git checkout 'nom du fichier'</div>
 
+	Supprime un add:
+	<div class="cmd">git reset 'nom du fichier'</div>
+	<div class="cmd">git reset . 'nom du fichier' (tout les fichiers depuis le dernier commit)</div>
+
+	Supprimer le dernier commit:
+	<div class="cmd">git reset HEAD^ 'nom du fichier'</div>Supprimer les deux derniers commit:
+	<div class="cmd">git reset HEAD^^ 'nom du fichier'</div>
+
+
+
+
+
+	<h2>La notion de branche</h2>
+	<p>Une branche permet est une copie du projet. Elle permet de développer en paralèlle de nouvelle fonctionnalités. Lorsqu'on considère les nouveautés opérationnelles, on peut les rappatrier sur le version principale (master)</p>
+
+	Voir les branches:
+	<div class="cmd">git branch</div>
+
+	Créer une nouvelle branche:
+	<div class="cmd">git branch 'donner un nom'</div>
+
+	Se placer sur une branche:
+	<div class="cmd">git checkout 'nom de la branche en question'</div>
+
+	Voir les différences entre deux branches:
+	<div class="cmd">git diff 'nom de la branche' ..master</div>
+
+	Apporter les modifs effectuées sur une branche dans master (il faut être sur master)
+	<div class="cmd">git checkout master</div>
+	<div class="cmd">git merge 'nom de la branche'</div>
+
+	Remplacer master par une branche:
+	<div class="cmd">git checkout master</div>
+	<div class="cmd">git fetch . 'nom de la branche</div>
+	<div class="warning">Le fetch va littérallement remplacer master par la branche. Il s'agit donc d'une grosse modificaion dans le projet (ex: version 2)</div>
+
+
+
+
+	<h2>Répertoire distant et GitHub</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
+
 
 
 
